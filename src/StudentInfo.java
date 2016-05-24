@@ -2,16 +2,20 @@ import java.util.Scanner;
 
 public class StudentInfo {
 	static Scanner scan = new Scanner(System.in);
-
+	static String[] names = { "Damien", "Frank", "Aaron", "Chioke", "Celena", "Kim", "Aisha", "Ian", "James", "Kamel" };
+	static String[] hometown = { "Australia, mate", "Probably Lansing?", "BIG DOG, MI", "Iowa", "Ann Arborz",
+			"New Angland", "Gross Point", "Taylor", "Wyandotte", "Jordan" };
+	static String[] food = { "Apple", "Banana", "Orange", "Grapes", "Kiwi", "Strawberries", "Pear", "Blueberries", "Yams",
+			"Potatoes" };
 	public static void main(String[] args) {
-		String input = "";
-		int user = 0;
 
-		String[] names = { "Damien", "Frank", "Aaron", "Chioke", "Celena", "Kim", "Aisha", "Ian", "James", "Kamel" };
-		String[] hometown = { "Australia, mate", "Probably Lansing?", "BIG DOG, MI", "Iowa", "Ann Arborz",
-				"New Angland", "Gross Point", "Taylor", "Wyandotte", "Jordan" };
-		String[] food = { "Apple", "Banana", "Orange", "Grapes", "Kiwi", "Strawberries", "Pear", "Blueberries", "Yams",
-				"Potatoes" };
+		studentApp();
+		System.out.println("Thanks, goodbye!");
+	}
+
+	private static void studentApp() {
+		String input;
+		int user;
 		do {
 			System.out.println("Welcome to our Java class.  Which student would you like to learn more about?");
 			System.out.print("(enter a number from 1-10): ");
@@ -31,7 +35,6 @@ public class StudentInfo {
 			input = readValidString("y", "n");
 
 		} while (input.equalsIgnoreCase("y"));
-		System.out.println("Thanks, goodbye!");
 	}
 
 	public static int readValidInt() {
